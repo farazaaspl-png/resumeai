@@ -34,7 +34,7 @@ function App() {
       formData.append('resume', resume);
       formData.append('jobDescription', jobDescription);
 
-      const response = await fetch('http://localhost:8000/analyse', {
+      const response = await fetch('http://13.202.42.61:8000/analyse', {
         method: 'POST',
         body: formData,
       });
