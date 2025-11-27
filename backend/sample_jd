@@ -1,0 +1,88 @@
+We are looking for a Senior Software Developer with 6+ years of experience in building scalable web applications and microservices. The ideal candidate is proficient in Node.js, Nest.js, React, TypeScript, and cloud technologies including AWS, Docker, and Kubernetes.
+
+Responsibilities
+
+Develop and optimize microservices using Node.js/Nest.js and Kafka for high-scale applications.
+
+Improve system performance through database indexing, caching (Redis), and API optimization.
+
+Implement CI/CD pipelines using GitHub Actions, Docker, and Kubernetes for efficient deployments.
+
+Build secure authentication systems using OAuth 2.0, JWT, and follow OWASP best practices.
+
+Collaborate with cross-functional teams using Agile workflows, contributing to frontend development with React and Next.js.
+
+Maintain code quality through standards, documentation, and mentoring junior developers.
+
+Required Skills
+
+Node.js, Nest.js, Express.js
+
+React, Next.js, Redux
+
+MongoDB, MySQL, Redis
+
+Kafka, Socket.io
+
+AWS, Docker, Kubernetes, CI/CD
+
+Jest, Swagger, Git/GitHub
+
+
+
+
+# @app.post("/analyse")
+# async def analyse_resume(
+#     resume: UploadFile = File(...),
+#     jobDescription: str = Form(...)
+# ):
+#     """
+#     Analyze resume against job description
+    
+#     Parameters:
+#     - resume: Resume file (PDF, DOC, DOCX)
+#     - jobDescription: Job description text
+#     """
+#     try:
+#         # Save the uploaded resume
+#         file_path = UPLOAD_DIR / resume.filename
+#         with file_path.open("wb") as buffer:
+#             shutil.copyfileobj(resume.file, buffer)
+        
+#         # TODO: Add your resume analysis logic here
+#         # This is where you would:
+#         # 1. Parse the resume file
+#         # 2. Compare it with the job description
+#         # 3. Return analysis results
+        
+#         response_data = {
+#             "status": "success",
+#             "message": "Resume analyzed successfully",
+#             "data": {
+#                 "filename": resume.filename,
+#                 "content_type": resume.content_type,
+#                 "file_size": file_path.stat().st_size,
+#                 "job_description_length": len(jobDescription),
+#                 # Add your analysis results here
+#                 "match_score": 85,
+#                 "key_skills_found": ["Python", "FastAPI", "React"],
+#                 "missing_skills": ["Docker", "Kubernetes"],
+#                 "recommendations": [
+#                     "Add more details about your FastAPI experience",
+#                     "Include specific project examples"
+#                 ]
+#             }
+#         }
+        
+#         # Delete the file after processing
+#         if file_path.exists():
+#             file_path.unlink()
+        
+#         return response_data
+#     except Exception as e:
+#         return {
+#             "status": "error",
+#             "message": f"Error analyzing resume: {str(e)}"
+#         }
+#     finally:
+#         await resume.close()
