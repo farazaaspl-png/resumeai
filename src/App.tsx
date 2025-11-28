@@ -17,7 +17,7 @@ function App() {
 
   const handleAnalyze = async () => {
     if (!resume) {
-      setError('Please upload a resume');
+      setError('Please upload a resume file');
       return;
     }
     if (!jobDescription.trim()) {
