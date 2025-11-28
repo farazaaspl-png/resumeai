@@ -35,7 +35,7 @@ function App() {
       formData.append('jobDescription', jobDescription);
 
       // const response = await fetch('http://13.202.42.61:8000/analyse', {
-      const response = await fetch('http://localhost:8000/analyse', {
+      const response = await fetch('https://app.aitechnology.sbs/analyse', {
         method: 'POST',
         body: formData,
       });
